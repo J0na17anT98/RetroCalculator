@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30EDB0D1CAC1C69005550C6 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = A30EDB0C1CAC1C69005550C6 /* btn.wav */; };
 		A31D30AF1CAB4BD8009931CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D30AE1CAB4BD8009931CC /* AppDelegate.swift */; };
 		A31D30B11CAB4BD8009931CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D30B01CAB4BD8009931CC /* ViewController.swift */; };
 		A31D30B41CAB4BD8009931CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31D30B21CAB4BD8009931CC /* Main.storyboard */; };
 		A31D30B61CAB4BD8009931CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31D30B51CAB4BD8009931CC /* Assets.xcassets */; };
 		A31D30B91CAB4BD8009931CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31D30B71CAB4BD8009931CC /* LaunchScreen.storyboard */; };
+		A31D30C11CAB55CD009931CC /* Minecrafter.Alt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A31D30C01CAB55CD009931CC /* Minecrafter.Alt.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30EDB0C1CAC1C69005550C6 /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 		A31D30AB1CAB4BD8009931CC /* RetroCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31D30AE1CAB4BD8009931CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A31D30B01CAB4BD8009931CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		A31D30B51CAB4BD8009931CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A31D30B81CAB4BD8009931CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A31D30BA1CAB4BD8009931CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A31D30C01CAB55CD009931CC /* Minecrafter.Alt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecrafter.Alt.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		A31D30AD1CAB4BD8009931CC /* RetroCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A31D30C01CAB55CD009931CC /* Minecrafter.Alt.ttf */,
+				A30EDB0C1CAC1C69005550C6 /* btn.wav */,
 				A31D30AE1CAB4BD8009931CC /* AppDelegate.swift */,
 				A31D30B01CAB4BD8009931CC /* ViewController.swift */,
 				A31D30B21CAB4BD8009931CC /* Main.storyboard */,
@@ -123,8 +129,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30EDB0D1CAC1C69005550C6 /* btn.wav in Resources */,
 				A31D30B91CAB4BD8009931CC /* LaunchScreen.storyboard in Resources */,
 				A31D30B61CAB4BD8009931CC /* Assets.xcassets in Resources */,
+				A31D30C11CAB55CD009931CC /* Minecrafter.Alt.ttf in Resources */,
 				A31D30B41CAB4BD8009931CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +264,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.RetroCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -267,6 +276,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.RetroCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -289,6 +299,7 @@
 				A31D30BF1CAB4BD8009931CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

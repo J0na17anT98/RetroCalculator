@@ -259,6 +259,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbP-IB-j4S">
+                                <rect key="frame" x="228" y="532" width="143" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="Bp4-cs-gop"/>
+                                    <constraint firstAttribute="height" constant="45" id="V9o-zc-fsI"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccj-ja-oJ9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -270,6 +281,8 @@
                             <constraint firstItem="qUx-aD-A2n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KNu-bD-F9g"/>
                             <constraint firstItem="PEH-I4-ckc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Sco-ym-v2f"/>
                             <constraint firstItem="gfX-iw-wfo" firstAttribute="centerX" secondItem="qUx-aD-A2n" secondAttribute="centerX" id="SoD-hU-UAa"/>
+                            <constraint firstItem="ZbP-IB-j4S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VW8-0U-Q5Z"/>
+                            <constraint firstItem="ZbP-IB-j4S" firstAttribute="top" secondItem="qUx-aD-A2n" secondAttribute="bottom" id="l2m-O8-HpA"/>
                             <constraint firstAttribute="trailing" secondItem="cL3-Ec-Mdj" secondAttribute="trailing" id="rOd-RJ-BEg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PEH-I4-ckc" secondAttribute="bottom" id="rcB-PB-1Eg"/>
                             <constraint firstItem="suz-f8-7wX" firstAttribute="top" secondItem="qUx-aD-A2n" secondAttribute="top" constant="16" id="sYL-c3-iwA"/>
@@ -278,6 +291,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="onClearButtonPressed" destination="ZbP-IB-j4S" id="AJa-wG-7JB"/>
                         <outlet property="outputLbl" destination="suz-f8-7wX" id="beS-ix-sMX"/>
                     </connections>
                 </viewController>
@@ -329,6 +343,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>

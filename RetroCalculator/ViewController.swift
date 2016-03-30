@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         case Empty = "Empty"
     }
     
+    @IBOutlet weak var onClearButtonPressed: UIButton!
+    
     @IBOutlet weak var outputLbl: UILabel!
     
     var btnSound: AVAudioPlayer!
@@ -42,6 +44,17 @@ class ViewController: UIViewController {
             print(err.debugDescription)
         }
         
+        
+    }
+    
+    @IBAction func onClearButtonPressed(sender: AnyObject) {
+        
+        runningNumber = ""
+        leftValString = ""
+        rightValString = ""
+        result = ""
+        
+        outputLbl.text = "0"
         
     }
     

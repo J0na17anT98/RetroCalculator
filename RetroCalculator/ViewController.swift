@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         case Subtract = "-"
         case Add = "+"
         case Empty = "Empty"
+        case Clear = "Clear"
     }
     
     @IBOutlet weak var onClearButtonPressed: UIButton!
@@ -48,12 +49,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClearButtonPressed(sender: AnyObject) {
+        processOperation(Operation.Clear)
         
         runningNumber = ""
         leftValString = ""
         rightValString = ""
         result = ""
-        
         outputLbl.text = "0"
         
     }

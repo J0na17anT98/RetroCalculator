@@ -26,6 +26,7 @@
 		A31D30B81CAB4BD8009931CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A31D30BA1CAB4BD8009931CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A31D30C01CAB55CD009931CC /* Minecrafter.Alt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecrafter.Alt.ttf; sourceTree = "<group>"; };
+		A3FEBFF91CAC3D56005576DC /* RetroCalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = RetroCalculator.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		A31D30AD1CAB4BD8009931CC /* RetroCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A3FEBFF91CAC3D56005576DC /* RetroCalculator.entitlements */,
 				A31D30C01CAB55CD009931CC /* Minecrafter.Alt.ttf */,
 				A30EDB0C1CAC1C69005550C6 /* btn.wav */,
 				A31D30AE1CAB4BD8009931CC /* AppDelegate.swift */,
@@ -103,6 +105,14 @@
 					A31D30AA1CAB4BD8009931CC = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = KMTZDB3J22;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -264,7 +274,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.RetroCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -276,7 +286,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Techinator.RetroCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

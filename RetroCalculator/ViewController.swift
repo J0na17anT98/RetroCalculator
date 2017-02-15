@@ -20,8 +20,6 @@ class ViewController: UIViewController {
         case Clear = "Clear"
     }
     
-    @IBOutlet weak var onClearButtonPressed: UIButton!
-    
     @IBOutlet weak var outputLbl: UILabel!
     
     var btnSound: AVAudioPlayer!
@@ -35,11 +33,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
-        let soundUrl = NSURL(fileURLWithPath:  path!)
+        let path = Bundle.main.path(forResource: "btn", ofType: "wav")
+        let soundUrl = URL(fileURLWithPath:  path!)
         
         do {
-            try btnSound = AVAudioPlayer(contentsOfURL: soundUrl)
+            try btnSound = AVAudioPlayer(contentsOf: soundUrl)
             btnSound.prepareToPlay()
         } catch let err as NSError {
             print(err.debugDescription)
@@ -48,45 +46,41 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func onClearButtonPressed(sender: AnyObject) {
-        processOperation(Operation.Clear)
-        
-        runningNumber = ""
-        leftValString = ""
-        rightValString = ""
-        result = ""
-        outputLbl.text = "0"
-        
-    }
-    
-    @IBAction func numberPressed(btn: UIButton!) {
+    @IBAction func numberPressed(_ btn: UIButton!) {
         playSound()
         
         runningNumber += "\(btn.tag)"
         outputLbl.text = runningNumber
     }
 
-    @IBAction func onDividePressed(sender: AnyObject) {
+    @IBAction func onDividePressed(_ sender: Any) {
         processOperation(Operation.Divide)
     }
 
-    @IBAction func onMultiplyPressed(sender: AnyObject) {
+    @IBAction func onMultiplyPressed(_ sender: Any) {
         processOperation(Operation.Multiply)
     }
     
-    @IBAction func onSubtractPressed(sender: AnyObject) {
+    @IBAction func onSubtractPressed(_ sender: Any) {
         processOperation(Operation.Subtract)
     }
     
-    @IBAction func onAddPressed(sender: AnyObject) {
+    @IBAction func onAddPressed(_ sender: Any) {
         processOperation(Operation.Add)
     }
     
-    @IBAction func onEqualPressed(sender: AnyObject) {
+    @IBAction func onEqualPressed(_ sender: Any) {
         processOperation(currentOperation)
     }
     
-    func processOperation(op: Operation) {
+    @IBAction func onClearPressed(_ sender: Any){
+        runningNumber = "\(0)"
+        leftValString = "\(0)"
+        rightValString = "\(0)"
+        
+    }
+
+    func processOperation(_ op: Operation) {
         playSound()
         
         if currentOperation != Operation.Empty {
@@ -121,7 +115,7 @@ class ViewController: UIViewController {
     }
     
     func playSound(){
-        if btnSound.playing {
+        if btnSound.isPlaying {
             btnSound.stop()
         }
         
